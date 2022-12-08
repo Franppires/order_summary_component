@@ -1,9 +1,160 @@
+
+/*configuração inicial*/
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Overpass', sans-serif;
+    font-weight: 400;
 }
 
-body {
+/*cores da pagina*/
+:root { 
+    --main-orange: hsl(29, 100%, 50%);
+    --main-White: hsl(0, 0%, 100%);
+    --main-light-grey: hsl(217, 12%, 63%);
+    --main-medium-grey: hsl(216, 12%, 54%);
+    --main-dark-blue: hsl(213, 19%, 18%);
+    --main-very-dark-blue: hsl(216, 12%, 8%);
+}
 
+/*geral*/
+body {
+    background-color: var(--main-very-dark-blue);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/*numeros*/
+nav ul  {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    color: var(--main-light-grey);
+}
+
+li { 
+    background-color: var(--main-very-dark-blue);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 30px 0 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li.active {
+    background-color: var(--main-medium-grey);
+    color: var(--main-White);
+}
+
+li:hover {
+    background-color: var(--main-orange);
+    color: var(--main-White);
+    cursor: pointer;
+}
+
+/*conteúdo principal*/
+.content { 
+    flex-direction: column;
+    background-color: var(--main-dark-blue);
+    padding: 20px;
+    border-radius: 30px;
+    width: 375px;
+}
+
+/*imagem estrela*/
+.star {
+    background-color: var(--main-very-dark-blue);
+    padding: 13px ;
+    border-radius: 50%;
+    width: 45px;
+}
+
+/*titulo*/
+.title {
+    color: hsl(0, 0%, 100%);
+    margin: 22px 0 10px 0 
+}
+
+/*texto principal*/
+.text { 
+    font-weight: 400;
+    color: hsl(217, 12%, 63%);
+}
+
+/*botão de enviar*/
+button { 
+    width: 100%;
+    background-color: var(--main-orange);
+    color: var(--main-White);
+    font-size: 700;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    margin: 30px 0 10px;
+}
+
+button:hover {
+    background-color: var(--main-White);
+    color: var(--main-orange);
+    cursor: pointer;
+}
+
+/*agradecimento*/
+.thank-you {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*imagem de agradecimento*/
+.thanks {
+    margin: 18px 0 30px;
+}
+
+/*nota*/
+.result {
+    font-weight: 400;
+    color: var(--main-orange);
+    background-color: var(--main-very-dark-blue);
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+/*adiciona e remove a classe de oculto*/
+.hide {
+    display: none;
+}
+
+/*rodapé */
+.contact {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    color: var(--main-White);
+    background-color: var(--main-dark-blue);
+    border-radius: 30px;
+    margin-top: 5px;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.logo { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px 0 ;
 }
